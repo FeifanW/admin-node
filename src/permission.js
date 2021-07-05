@@ -14,7 +14,7 @@ router.beforeEach(async(to, from, next) => {
   // start progress bar
   NProgress.start()
 
-  // set page title
+  // set page title，路由全局守卫首先获得title,路由的源信息
   document.title = getPageTitle(to.meta.title)
 
   // determine whether the user has logged in
