@@ -9,7 +9,7 @@ const {
 const router = express.Router()
 // 监听跟路由下的处理
 router.get('/', function(req, res) {
-  res.send('书籍管理后台')
+  res.send('电子书管理后台')
 })
 // 指定的/user会作为指定路由的前缀
 router.use('/user', userRouter)
