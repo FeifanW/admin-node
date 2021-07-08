@@ -1,5 +1,5 @@
 module.exports = {
-  title: '书籍后台管理',
+  title: '电子书后台管理',
 
   /**
    * @type {boolean} true | false

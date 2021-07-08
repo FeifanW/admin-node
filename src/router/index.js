@@ -57,18 +57,21 @@ export const asyncRoutes = [
   // 把自己定义的views下面book里面的create.vue组件，如果想控制只要管理员才能访问，就需要加载asyncRoutes里面
   {
     path: '/book',
+    name: 'book',
     component: Layout,
     // 重定向
     redirect: '/book/create',
     meta: { title: '图书管理', icon: 'documentation', roles: ['admin'] },
     children: [
       {
+        name: 'bookCreate',
         path: '/book/create',
         // @在webpack里面有定义
         component: () => import('@/views/book/create'),
         meta: { title: '上传图书', icon: 'edit', roles: ['admin'] }
       },
       {
+        name: 'bookList',
         path: '/book/list',
         // @在webpack里面有定义
         component: () => import('@/views/book/create'),

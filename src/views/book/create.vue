@@ -53,6 +53,15 @@
     <el-col>
       <el-button @click="isCollapse = !isCollapse">折叠</el-button>
     </el-col>
+    <el-col>
+      <!-- separator控制分割线 ,仅仅切换页面的时候可以用to属性-->
+      <el-breadcrumb separator="\">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
+        <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+        <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+      </el-breadcrumb>
+    </el-col>
   </el-row>
 </template>
 
